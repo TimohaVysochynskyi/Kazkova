@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background: rgb(0,133,205);
+    background: linear-gradient(105deg, rgba(0,133,205,0.65) 35%, rgba(0,255,119,0.75) 80%);
+}
+
 model-viewer {
     margin: 0 !important;
     padding: 0 !important;
