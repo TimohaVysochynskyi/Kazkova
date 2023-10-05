@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
-</head>
-<body>
-    <div class="container">
-        <div class="carousel-3d carousel-3d-controls">
-          <div class="carousel-3d-inner">
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(48).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(49).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(50).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(51).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(52).webp" alt="Slide"></div>
-            <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(53).webp" alt="Slide"></div>
-          </div>
-          <div class="carousel-3d-controls">
-            <a class="prev-btn waves-effect waves-light"><i class="fas fa-chevron-left"></i></a>
-            <a class="next-btn waves-effect waves-light"><i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
 
-      <script>
-        $('.carousel-3d-controls').mdbCarousel3d();
-      </script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider</title>
+	<link rel="stylesheet" href="./css/slider.css">
+</head>
+
+<body>
+	<div class="carousel-wrapper" data-gap="20">
+		<figure class="carousel">
+	    	<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+			<div class="carousel__slide">
+				<div class="carousel__slide-content"></div>
+			</div>
+		</figure>
+		<nav>
+			<button class="nav prev">prev<img src="./assets/arrow.png" alt="prev"></button>
+			<button class="nav next">next<img src="./assets/arrow.png" alt="next"></button>
+		</nav>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="./js/slider.js"></script>
 </body>
+
 </html>

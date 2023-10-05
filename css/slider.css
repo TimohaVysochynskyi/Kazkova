@@ -1,0 +1,71 @@
+@import url(style.css);
+body{
+    background: none;
+}
+.carousel-wrapper {
+    padding: 20px;
+    perspective: 800px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /*transform: scale(1.25);*/
+}
+
+.carousel {
+    width: 55%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carousel__slide {
+    width: 50vw;
+    height: 35vh;
+}
+.carousel__slide:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.carousel__slide-content{
+    border: 2px solid lightslategray;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-wrapper nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.nav {
+    flex: 0 0 auto;
+    margin: 0 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 48px;
+    height: 48px;
+}
+.nav img{
+    width: 100%;
+    height: 100%;
+}
+.nav:first-child{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .carousel{
+        width: 100%;
+    }
+    .carousel__slide{
+        width: 100%;
+    }
+}
