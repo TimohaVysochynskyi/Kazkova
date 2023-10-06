@@ -6,45 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Slider</title>
 	<link rel="stylesheet" href="./css/slider.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-	<div class="carousel-wrapper" data-gap="20">
-		<figure class="carousel">
-	    	<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-			<div class="carousel__slide">
-				<div class="carousel__slide-content"></div>
-			</div>
-		</figure>
-		<nav>
-			<button class="nav prev">prev<img src="./assets/arrow.png" alt="prev"></button>
-			<button class="nav next">next<img src="./assets/arrow.png" alt="next"></button>
-		</nav>
+	<div class="container">
+		<div class="swiper tale-slider">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">1</div>
+		        <div class="swiper-slide">2</div>
+		        <div class="swiper-slide">3</div>
+		        <div class="swiper-slide">4</div>
+		        <div class="swiper-slide">5</div>
+		        <div class="swiper-slide">6</div>
+		    </div>
+	
+		    <div class="swiper-pagination tale-swiper-pagination"></div>
+	
+		    <div class="swiper-button-prev tale-swiper-button-prev"></div>
+		    <div class="swiper-button-next tale-swiper-button-next"></div>
+		</div>
 	</div>
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="./js/slider.js"></script>
+	<script type="text/javascript" src="./js/slider.js"></script>
 </body>
 
 </html>
