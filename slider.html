@@ -9,13 +9,28 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 
 <body>
 	<div class="container">
 		<div class="swiper tale-slider">
 		    <div class="swiper-wrapper">
-		        <div class="swiper-slide">1</div>
+		        <div class="swiper-slide">
+					<div class="swiper__content">
+						<h2 class="swiper-slide__title">Казка про тролів</h2>
+						<p class="swiper-slide__text">&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis officia explicabo dignissimos incidunt distinctio voluptas totam pariatur quibusdam.</p>
+						<div class="swiper-slide__navigation">
+							<a href="#" class="swiper-slide__play"><img src="./assets/play.png" alt="Play"><span>Слухати аудіо</span>
+							</a>
+							<a href="#" class="swiper-slide__read"></a>
+						</div>
+					</div>
+					<model-viewer class="swiper__model" shadow-intensity="1" camera-orbit="90deg 75deg" touch-action="pan-y" auto-rotate autoplay ar ar-modes="webxr scene-viewer" src="./assets/troll.glb">
+            		</model-viewer>
+				</div>
 		        <div class="swiper-slide">2</div>
 		        <div class="swiper-slide">3</div>
 		        <div class="swiper-slide">4</div>

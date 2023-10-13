@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --swiper-theme-color: #303030 !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 .container{
     width: 100vw;
@@ -20,14 +21,53 @@
 .tale-slider{
     width: 70vw;
     height: 60vh;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .swiper-slide{
-    background-color: #cccccc9f;
+    background: rgb(255,255,255);
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 12vh;
     font-weight: 500;
+    border: 3px solid rgba(184, 184, 184, 0.3);
+    border-radius: 15px;
+    padding-left: 30px;
+}
+.swiper-slide:nth-child(2){
+    box-shadow: 0px 0px 4px #ffffae;
+    background: linear-gradient(45deg, rgba(255,255,255,0.35) 0%, rgba(254,255,212,0.75) 15%, rgba(255,255,174,0.45) 25%, rgba(252,196,255,0.7) 100%);
+}
+.swiper__content{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.swiper-slide__title{
+    font-size: 32px;
+    font-size: #222;
+}
+.swiper-slide__text{
+    font-size: 24px;
+    font-size: #222;
+}
+.swiper-slide__play img{
+    width: 56px;
+    margin-right: 12px;
+}
+.swiper-slide__play{
+    font-size: 24px;
+    text-decoration: none;
+    color: #ff5900;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.swiper__model{
+    width: 45%;
+    height: 100%;
+    object-fit: contain;
 }

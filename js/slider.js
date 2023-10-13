@@ -1,8 +1,5 @@
 const swiper = new Swiper('.tale-slider', {
-    loop: true,                         //loop
-    autoplay: {                         //autoplay
-        delay: 2000,  
-    },       
+    loop: true,                         //loop     
     navigation: {                       //navigation(arrow)
         nextEl: ".tale-swiper-button-next",
         prevEl: ".tale-swiper-button-prev",
