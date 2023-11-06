@@ -37,7 +37,8 @@
             <?php
             $conn = new mysqli("localhost", "root", "", "kazkova");
             $data = $conn->query("SELECT * FROM `kazka`");
-
+            $conn->set_charset("utf8");
+            
             foreach($data as $kazka){
                 $id = $kazka['id']; $name = $kazka['name']; $author = $kazka['author']; $model = $kazka['model']; $audio = $kazka['audio']; $text = $kazka['text'];
 

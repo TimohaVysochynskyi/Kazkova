@@ -1,15 +1,23 @@
 <?php
 
 $conn = new mysqli("localhost", "root", "", "kazkova");
-
+$conn->set_charset("utf8");
 $kazkaId = $_POST['Id'];
 
-$data = $conn->query("SELECT * FROM `kazka` WHERE `id` = $kazkaId");
+$data = $conn->query("SELECT * FROM `kazka` WHERE `id` = '$kazkaId'");
 $kazka = $data->fetch_assoc();
 
 echo '<div class="details">';
     $id = $kazka['id']; $name = $kazka['name']; $author = $kazka['author']; $model = $kazka['model']; $audio = $kazka['audio']; $text = $kazka['text'];
-    
+    $cookieName = "rated" . strval($id); // Create a variable of name of cookie (converting number to a string)
+
+    $allStar = $kazka['all_star'];
+    $starCount = intval($kazka['star_count']);
+    $allStar = explode(" | ", $allStar);
+    $starSum = array_sum($allStar);
+    $starAvarage = $starSum / $starCount;
+    $starAvarage = round($starAvarage, 1);
+
     echo '
         <button type="button" class="details__close" onclick="$(\'#details-wrapper\').fadeOut(\'fast\');" ><img src="./assets/close.png" alt="Close"></button>
         <div class="details__col">
@@ -32,6 +40,21 @@ echo '<div class="details">';
                 </div>
                 <div class="read-wrapper">
                     <a class="read__btn" href="'.$text.'"><img src="./assets/read.png" alt="Книжка"> Читати</a>
+                </div>
+                <div class="quick-feedback">
+                    <div class="avarage-wrapper">
+                        <div class="avarage__circle">'.$starAvarage.'</div>
+                    </div>';
+                    echo '<div class="stars-wrapper">';
+                        for($i=1; $i<=5; $i++){ 
+                            echo'
+                                <a href="javascript:void(0)" class="star star<?php echo $i; ?>" onclick="$(\'.stars-wrapper\').load(\'./set_stars.php\', {
+                                    Id: \''.$id.'\',
+                                    Star: <?php echo $i; ?>
+                                });"> <div class="star__img star__img<?php echo $i; ?>"></div> </a>
+                            ';
+                        }
+                    echo '</div>
                 </div>
             </div>
             <p class="details__author">'.$author.'</p>
