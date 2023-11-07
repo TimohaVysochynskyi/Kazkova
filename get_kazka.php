@@ -1,5 +1,16 @@
 <?php
 
+echo '
+<style>
+.star__img{
+    background-size: cover;
+}
+.star1:hover .star__img{
+    background-image: url(../assets/star-fill.png);
+}
+</style>
+';
+
 $conn = new mysqli("localhost", "root", "", "kazkova");
 $conn->set_charset("utf8");
 $kazkaId = $_POST['Id'];
@@ -48,10 +59,10 @@ echo '<div class="details">';
                     echo '<div class="stars-wrapper">';
                         for($i=1; $i<=5; $i++){ 
                             echo'
-                                <a href="javascript:void(0)" class="star star<?php echo $i; ?>" onclick="$(\'.stars-wrapper\').load(\'./set_stars.php\', {
+                                <a href="javascript:void(0)" class="star star'.$i.'" onclick="$(\'.stars-wrapper\').load(\'./set_stars.php\', {
                                     Id: \''.$id.'\',
-                                    Star: <?php echo $i; ?>
-                                });"> <div class="star__img star__img<?php echo $i; ?>"></div> </a>
+                                    Star: '.$i.'
+                                });"><svg class="star__img star__img'.$i.'"><image xlink:href="./assets/star.svg" width="22" height="22"></svg></a>
                             ';
                         }
                     echo '</div>

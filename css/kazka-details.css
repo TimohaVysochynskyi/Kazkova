@@ -122,33 +122,10 @@
 .star__img{
     width: 100%;
     height: 100%;
-    background-image: url(../assets/star-stroke.png);
-    transition: .2s;
+    object-fit: contain;
 }
-.star1:hover .star__img1{
-    background-image: url(../assets/star-fill.png);
-}
-.star__img2:hover .star__img1,
-.star__img2:hover .star__img2{
-    background-image: url(../assets/star-fill.png);
-}
-.star__img3:hover .star__img1,
-.star__img3:hover .star__img2,
-.star__img3:hover .star__img3{
-    background-image: url(../assets/star-fill.png);
-}
-.star__img4:hover .star__img1,
-.star__img4:hover .star__img2,
-.star__img4:hover .star__img3,
-.star__img4:hover .star__img4{
-    background-image: url(../assets/star-fill.png);
-}
-.star__img5:hover .star__img1,
-.star__img5:hover .star__img2,
-.star__img5:hover .star__img3,
-.star__img5:hover .star__img4,
-.star__img5:hover .star__img5{
-    background-image: url(../assets/star-fill.png);
+.star__img1:hover{
+    color: yellow;
 }
 
 

@@ -36,8 +36,8 @@
         <div class="kazky-wrapper">
             <?php
             $conn = new mysqli("localhost", "root", "", "kazkova");
-            $data = $conn->query("SELECT * FROM `kazka`");
             $conn->set_charset("utf8");
+            $data = $conn->query("SELECT * FROM `kazka`");
             
             foreach($data as $kazka){
                 $id = $kazka['id']; $name = $kazka['name']; $author = $kazka['author']; $model = $kazka['model']; $audio = $kazka['audio']; $text = $kazka['text'];
@@ -65,8 +65,17 @@
             ?>
         </div>
 
-        <div class="feedback-wrapper">
+        <div class="title-wrapper" style="margin-top: 10vh">
+            <h1 class="title">Залиште відгук</h1>
+            <div class="title__line"></div>
+        </div>
 
+        <div class="feedback-wrapper">
+            <form method="post" class="feedback-form">
+                <input type="text" class="form-input" name="name" placeholder="Ваше ім'я: ">
+                <textarea name="text" class="form-input form-textarea" placeholder="Ваш відгук: "></textarea>
+                <button type="submit" class="form-input feedback-button">Надіслати</button>
+            </form>
         </div>
     </main>
 
