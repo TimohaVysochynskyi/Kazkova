@@ -1,0 +1,38 @@
+@import url(../css/style.css);
+
+h2{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.user-feedbacks{
+    width: 100vw;
+}
+table{
+    width: 90%;
+    margin: 0 auto;
+}
+th{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-size: 20px;
+}
+th, td{
+    padding: 12px;
+    border: 1px solid lightgray;
+    height: auto;
+    max-width: 50%;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.531);
+    font-size: 18px;
+    color: #262626;
+}
+button{
+    padding: 6px 12px;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgb(100, 100, 100, 0.3);
+    cursor: pointer;
+}

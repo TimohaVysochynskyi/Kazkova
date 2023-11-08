@@ -1,4 +1,5 @@
 @import url(./style.css);
+@import url(./feedback-form.css);
 
 :root{
     --swiper-theme-color: #222;

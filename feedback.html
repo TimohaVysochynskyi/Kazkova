@@ -12,6 +12,11 @@
 
 <body>
 
+    <div class="title-wrapper" style="margin-top: 10vh">
+        <h1 class="title">Усі відгуки</h1>
+        <div class="title__line"></div>
+    </div>
+
     <div class="swiper-wrapper">
         <div class="swiper feedback-swiper">
             <div class="swiper-wrapper">
@@ -56,8 +61,22 @@
         </div>
     </div>
 
+    <div class="title-wrapper" style="margin-top: 10vh">
+        <h1 class="title">Залиште відгук</h1>
+        <div class="title__line"></div>
+    </div>
+
+    <div class="feedback-wrapper">
+        <form method="post" class="feedback-form" id="user-feedback">
+            <input type="text" class="form-input" name="name" placeholder="Ваше ім'я: ">
+            <textarea name="text" class="form-input form-textarea" placeholder="Ваш відгук: "></textarea>
+            <button type="submit" class="form-input feedback-button">Надіслати</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/feedback-swiper.js"></script>
+    <script src="./js/feedback.js"></script>
 </body>
 
 </html>
