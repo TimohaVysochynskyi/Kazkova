@@ -23,7 +23,7 @@ foreach($data as $userFeedback){
             <td>'.$text.'</td>
             <td>'.$date.'</td>
             <td><button type="submit" onclick="$(\'#user-feedbacks\').load(\'./delete_user-feedback.php\', {Id: \''.$id.'\'})">Delete</button></td>
-            <td><button type="submit" onclick="$(\'#user-feedbacks\').load(\'./edit_user-feedback.php\', {Id: \''.$id.'\'})">Edit</button></td>
+            <td><button type="submit" onclick="$(\'#edit-feedbacks\').load(\'./edit_user-feedback.php\', {Id: \''.$id.'\'}); $(\'#edit-feedbacks\').fadeIn(\'slow\');$(\'#edit-feedbacks\').css(\'display\', \'flex\');">Edit</button></td>
         </tr>
     ';
 }

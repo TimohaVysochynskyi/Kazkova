@@ -75,7 +75,7 @@
             <form method="post" class="feedback-form" id="user-feedback">
                 <input type="text" class="form-input" name="name" placeholder="Ваше ім'я: ">
                 <textarea name="text" class="form-input form-textarea" placeholder="Ваш відгук: "></textarea>
-                <button type="submit" class="form-input feedback-button">Надіслати</button>
+                <button type="submit" class="form-input form-button">Надіслати</button>
             </form>
         </div>
     </main>
