@@ -1,24 +1,19 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "kazkova");
-$conn->set_charset("utf8");
+require_once "../db.php";
 
-$editId = htmlentities(strip_tags(intval($_POST['Id'])));
+$editId = strip_tags(intval($_POST['Id']));
 
-$data = $conn->query("SELECT * FROM `user_feedback` WHERE `id` = '$editId'");
-$feedback = $data->fetch_assoc();
-
-$name = $feedback['name']; $text = $feedback['text'];
-
-// Here is code of editing and video adding is going
-
-echo '
-    <form method="post" enctype="multipart/form-data" class="edit-feedback-form" action="./edit_feedback.php">
-        <input type="text" name="name" class="form-input" value="'.$name.'">
-        <textarea name="text" class="form-input form-textarea">'.$name.'</textarea>
-        <input type="file" name="media" placeholder="Медіа">
-        <button type="submit" class="form-input form-button">Надіслати</button>
-    </form>
-';
+$userFeedbackData = $conn->query("SELECT * FROM `user_feedback` WHERE `id` = '$editId'");
+$userFeedback = $userFeedbackData->fetch_assoc();
 
 ?>
+
+<form method="post" enctype="multipart/form-data" class="feedback-form edit-feedback-form" action="./edit-feedback.php?id=<?php echo $editId; ?>">
+    <a href="#" onclick="$('#edit-feedbacks').fadeOut('slow');"><img src="../assets/close.png" alt="Close"></a>
+    <h2>Редагування відгуку</h2>
+    <input type="text" name="name" class="form-input" value="<?php echo $userFeedback['name'] ?>">
+    <textarea name="text" class="form-input form-textarea"><?php echo $userFeedback['text'] ?></textarea>
+    <input type="file" name="media"class="form-input" placeholder="Медіа">
+    <button type="submit" class="form-input form-button">Надіслати</button>
+</form>

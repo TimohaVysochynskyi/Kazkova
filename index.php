@@ -36,8 +36,7 @@
     <main class="container">
         <div class="kazky-wrapper">
             <?php
-            $conn = new mysqli("localhost", "root", "", "kazkova");
-            $conn->set_charset("utf8");
+            require_once "./db.php";
             $data = $conn->query("SELECT * FROM `kazka`");
             
             foreach($data as $kazka){

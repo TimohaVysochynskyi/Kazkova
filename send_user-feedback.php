@@ -1,7 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "kazkova");
-$conn->set_charset("utf8");
+require_once "./db.php";
 
 $name = htmlentities(strip_tags( $_POST["name"]));
 $text = htmlentities(strip_tags($_POST["text"]));
