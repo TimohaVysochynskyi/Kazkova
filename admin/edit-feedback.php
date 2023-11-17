@@ -2,8 +2,8 @@
 
 require_once "../db.php";
 
-$name = strip_tags($_POST['name']);
-$text = strip_tags($_POST['text']);
+$name = htmlentities(strip_tags($_POST['name']));
+$text = htmlentities(strip_tags($_POST['text']));
 $id = $_GET['id'];
 
 $filename = $_FILES['media']["name"];
