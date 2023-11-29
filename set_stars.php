@@ -15,7 +15,7 @@ $allStar = $allStar . $star;
 $starCount = $starCount + 1;
 
 
-$conn->query("UPDATE `kazka` SET `all_star` = '$allStar', `star_count` = '$starCount'");
+$conn->query("UPDATE `kazka` SET `all_star` = '$allStar', `star_count` = '$starCount' WHERE `id` = '$id'");
 
 
 /*$cookieName = "rated" . strval($id); // Create a variable of name of cookie (converting number to a string)

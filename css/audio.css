@@ -13,12 +13,11 @@ audio {
 .audio__btn {
     background: none;
     border-radius: 32px;
-    width: 64px;
+    width: 64px !important;
     height: 64px;
     cursor: pointer;
     border: none;
     margin-right: 20px;
-    width: 15% !important;
 }
 
 .audio__btn img {
@@ -27,12 +26,12 @@ audio {
     object-fit: contain;
 }
 
-.details__col div {
-    width: 100%;
-}
-
 .image-pause {
     display: none;
+}
+
+.audio__progress-wrapper {
+    width: calc(100% - 64px - 20px) !important;
 }
 
 .audio__progress-time {
