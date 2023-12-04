@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Час створення: Гру 04 2023 р., 06:34
--- Версія сервера: 10.4.27-MariaDB
--- Версія PHP: 8.2.0
+-- Час створення: Гру 04 2023 р., 10:02
+-- Версія сервера: 10.4.28-MariaDB
+-- Версія PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -72,7 +72,8 @@ INSERT INTO `kazka` (`id`, `name`, `author`, `model`, `audio`, `text`, `all_star
 (4, 'Казка про Печальку', 'Катерина Гаврилова', 'pichalka', 'pichalka', 'https://dytpsyholog.com/2015/05/23/%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE-%D0%BF%D0%B5%D1%87%D0%B0%D0%BB%D1%8C%D0%BA%D1%83/', '5 |', 1),
 (5, 'Подорож морського коника', 'Марія Солтис Смирнова', 'konik', 'konik', 'https://www.svitkazok.in.ua/morskyi-konyk/', '5 |', 1),
 (6, 'Як равлик бавився', 'Секора Ондржей', 'mushlia', 'mushlia', 'https://chl.kiev.ua/pub/Publication/Show/415', '5 | ', 1),
-(7, 'Літачок-рятівничок', 'Наталя Вовк', 'litak', 'litak', 'litak', '5 |', 1);
+(7, 'Літачок-рятівничок', 'Наталя Вовк', 'litak', 'litak', 'litak', '5 |', 1),
+(8, 'Прохана мавпочка', 'Автор', 'mavpa', 'mavpa', '#', '5 |', 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ ALTER TABLE `final_feedback`
 -- AUTO_INCREMENT для таблиці `kazka`
 --
 ALTER TABLE `kazka`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблиці `user_feedback`
