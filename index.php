@@ -24,8 +24,8 @@
                 <model-viewer class="logo" camera-orbit="90deg 96deg" autoplay ar ar-modes="webxr scene-viewer"
                     src="./assets/logo.glb">
                     <div class="feedback-btn-wrapper">
-                        <a href="./feedback.php" class="feedback-btn">Залишити відгук</a>
-                    </div>  
+                        <a href="./feedback.php" class="feedback-btn"><img src="./assets/curved-arrow.png">Подивитися відгуки</a>
+                    </div>
                 </model-viewer>
             </div>
         </header>

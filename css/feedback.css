@@ -1,18 +1,17 @@
 @import url(./style.css);
 @import url(./feedback-form.css);
 
-:root{
-    --swiper-theme-color: #222;
+:root {
+    --swiper-theme-color: #fffff0;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-
-    padding: 0 2vw;
 }
+
 
 .swiper-wrapper {
     height: 80vh;
@@ -40,7 +39,7 @@ body{
     align-items: center;
 }
 
-.swiper-slide__row{
+.swiper-slide__row {
     height: 70%;
     width: 100%;
 
@@ -48,11 +47,13 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.swiper-slide__row:last-child{
+
+.swiper-slide__row:last-child {
     padding: 30px;
     height: 30%;
 }
-.swiper-slide__row img{
+
+.swiper-slide__row img {
     height: 100%;
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -60,9 +61,80 @@ body{
     object-position: center;
 }
 
-.swiper-slide-text{
+.swiper-slide-text {
     text-align: justify;
+    font-size: 20px;
+    letter-spacing: .6px;
+    font-style: italic;
+    color: #6e1b1b;
 }
-.swiper-slide-author{
+
+.swiper-slide-author {
     text-align: right;
+    font-weight: 500;
+    font-size: 22px;
+    color: #333;
+}
+
+.feedback-swiper-prev,
+.feedback-swiper-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 40px;
+}
+
+.feedback-swiper-prev {
+    margin-left: 15px;
+}
+
+.feedback-swiper-next {
+    margin-right: 15px;
+}
+
+.feedback-swiper-next::after {
+    position: relative;
+    right: -3.5px;
+}
+
+.feedback-swiper-prev::after {
+    position: relative;
+    left: -3.5px;
+}
+
+.feedback-swiper-pagination {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    .swiper-wrapper {
+        height: 40vh;
+    }
+
+    .feedback-swiper-prev,
+    .feedback-swiper-next {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .swiper-slide-text {
+        font-size: 14px;
+    }
+
+    .swiper-slide-author {
+        font-size: 12px;
+    }
+
+    .swiper-slide__row:last-child {
+        padding: 5px;
+        overflow-y: scroll;
+    }
+
+    :root {
+        --swiper-navigation-size: 0px;
+    }
 }

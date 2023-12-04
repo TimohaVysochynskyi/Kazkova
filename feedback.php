@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-    <div class="title-wrapper" style="margin-top: 10vh">
+    <main class="container">
+        <div class="title-wrapper" style="margin-top: 10vh">
         <h1 class="title">Усі відгуки</h1>
         <div class="title__line"></div>
     </div>
@@ -27,7 +27,13 @@
                 ?>
                 <div class="swiper-slide">
                     <div class="swiper-slide__row">
-                        <img src="./data/feedbacks/<?php echo $feedback['media'] ?>" alt="Медіафайл відгуку">
+                        <?php
+                            if($feedback['media'] != ""){
+                                echo '<img src="./data/feedbacks/'.$feedback["media"].'" alt="Медіафайл відгуку">';
+                            } else {
+                                echo '<img src="./data/feedbacks/default.png" alt="Медіафайл, коли нема завантаженого">';
+                            }
+                        ?>
                     </div>
                     <div class="swiper-slide__row">
                         <p class="swiper-slide-text"><?php echo $feedback['text'] ?></p>
@@ -36,6 +42,8 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+            <div class="swiper-button-next feedback-swiper-next"></div>
+            <div class="swiper-button-prev feedback-swiper-prev"></div>
             <div class="swiper-pagination feedback-swiper-pagination"></div>
         </div>
     </div>
@@ -52,6 +60,7 @@
             <button type="submit" class="form-input feedback-button">Надіслати</button>
         </form>
     </div>
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

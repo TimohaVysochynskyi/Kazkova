@@ -75,6 +75,7 @@ model-viewer {
     background-image: url(../assets/bg-clouds.png);
     background-position: center;
     background-size: cover;
+    background-repeat: repeat-y;
 }
 
 
@@ -121,10 +122,41 @@ model-viewer {
 }
 
 .feedback-btn-wrapper {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
+.feedback-btn {
+    opacity: 0;
+    position: absolute;
+    padding: 18px;
+    background-color: rgba(255, 191, 71, 0.9);
+    text-align: center;
+    text-decoration: none;
+    color: #fffff0;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border-radius: 22px 6px 4px 6px;
+    bottom: 40px;
+    right: 40px;
+    transition: .8s;
+}
 
+.feedback-btn img {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: -72px;
+    left: 72px;
+    transform: rotate(35deg);
+    opacity: 1;
+}
+
+.feedback-btn-wrapper:hover .feedback-btn {
+    opacity: 1;
+    transition: 1.2s;
+}
 
 .kazka {
     position: relative;
@@ -185,7 +217,7 @@ model-viewer {
 
 .kazka__row {
     width: 100%;
-    height: 70%;
+    height: 75%;
     position: absolute;
     top: 0;
     display: flex;
@@ -256,12 +288,12 @@ model-viewer {
 
 @media screen and (max-width: 1610px) {
     .kazka__row h2 {
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 0px;
     }
 
     .kazka__row p {
-        font-size: 18px;
+        font-size: 14px;
         margin-top: 5px;
     }
 
@@ -280,11 +312,62 @@ model-viewer {
     .logo-wrapper {
         height: 75vh;
     }
+
+    .feedback-btn {
+        padding: 12px;
+        font-size: 16px;
+        bottom: 0;
+        right: 0;
+        letter-spacing: .8px;
+    }
+
+    .feedback-btn img {
+        width: 32px;
+        height: 32px;
+        top: -36px;
+    }
 }
 
 @media screen and (max-width: 1124px) {
     .logo-wrapper {
         height: 60vh;
+    }
+
+    .details__name {
+        font-size: 26px;
+    }
+
+    .stars-wrapper {
+        margin-left: 10px;
+        gap: 0 5px;
+    }
+
+    .avarage__circle {
+        width: 36px !important;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .audio__btn {
+        width: 48px !important;
+        height: 48px;
+    }
+
+    .read__btn img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .read__btn {
+        font-size: 18px;
+    }
+
+    .details__author {
+        font-size: 16px;
+    }
+
+    .details__col:last-child {
+        width: 40%;
     }
 }
 
@@ -304,6 +387,17 @@ model-viewer {
     .kazka {
         width: calc((100%/2) - 20px);
     }
+
+    .details {
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .details__col,
+    .details__col:last-child {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -322,11 +416,25 @@ model-viewer {
     .container {
         padding: 20px;
     }
+
+    .details__close {
+        width: 26px;
+        height: 26px;
+    }
+
+    .details__col,
+    .details__col:last-child {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 375px) {
     .container {
         padding: 10px;
+    }
+
+    .stars-wrapper {
+        flex-wrap: wrap;
     }
 }
 
