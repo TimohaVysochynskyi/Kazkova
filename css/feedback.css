@@ -14,7 +14,7 @@ body {
 
 
 .swiper-wrapper {
-    height: 80vh;
+    height: 95vh;
     width: 100%;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .swiper-slide__row {
-    height: 70%;
+    height: 50%;
     width: 100%;
 
     display: flex;
@@ -50,10 +50,11 @@ body {
 
 .swiper-slide__row:last-child {
     padding: 30px;
-    height: 30%;
+    height: 50%;
 }
 
-.swiper-slide__row img {
+.swiper-slide__row img,
+.swiper-slide__row video {
     height: 100%;
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -65,6 +66,7 @@ body {
     text-align: justify;
     font-size: 20px;
     letter-spacing: .6px;
+    width: 100%;
     font-style: italic;
     color: #6e1b1b;
 }
