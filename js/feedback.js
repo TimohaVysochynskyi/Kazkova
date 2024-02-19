@@ -22,7 +22,7 @@ if (window.innerWidth < 768) {
 }
 
 var feedbackSwiper = new Swiper(".feedback-swiper", {
-  slidesPerView: slidesPerView,
+  slidesPerView: 1,
   grid: {
     rows: rows,
   },

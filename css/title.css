@@ -1,0 +1,39 @@
+.header {
+    background-image: url(../assets/bg-clouds.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.logo-wrapper {
+    height: 60%;
+    width: 100%;
+}
+
+.header-title {
+    font-size: 6.5vh;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(128, 213, 168);
+    text-shadow: 0px 0px 2px #232323;
+    text-align: center;
+}
+
+.swiper {
+    width: 60%;
+    height: 40vh;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+}

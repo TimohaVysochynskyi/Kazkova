@@ -75,7 +75,7 @@ echo '
         //console.log(id);
         document.querySelector("#audio").play();
         $(".image-play").hide("fast"); $(".image-pause").show("fast");
-        if(document.querySelector(".image-play").style.display == "none"){
+        if (document.querySelector(".image-play").style.display == "none") {
             document.querySelector("#audio").pause();
             $(".image-pause").hide("fast"); $(".image-play").show("fast");
         }

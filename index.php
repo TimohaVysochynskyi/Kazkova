@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAZKOVA | Сучасні українські казки</title>
-    
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/kazka-details.css">
     <link rel="stylesheet" href="./css/feedback-form.css">
@@ -21,39 +21,47 @@
     <main class="container">
         <header>
             <div class="logo-wrapper">
-                <model-viewer class="logo" camera-orbit="90deg 96deg" autoplay ar ar-modes="webxr scene-viewer"
-                    src="./assets/logo.glb">
+                <model-viewer src="./assets/logo.glb" class="logo" ar ar-modes="webxr scene-viewer quick-look"
+                    camera-controls poster="poster.webp" shadow-intensity="1" autoplay exposure="0.75"
+                    tone-mapping="commerce" shadow-softness="1" min-camera-orbit="90deg 90deg"
+                    max-camera-orbit="90deg 90deg auto">
                     <div class="feedback-btn-wrapper">
-                        <a href="./feedback.php" class="feedback-btn"><img src="./assets/curved-arrow.png">Подивитися відгуки</a>
+                        <a href="./feedback.php" class="feedback-btn"><img src="./assets/curved-arrow.png">Подивитися
+                            відгуки</a>
                     </div>
                 </model-viewer>
             </div>
         </header>
         <?php
-            require_once "./db.php";
-            $data = $conn->query("SELECT * FROM `kazka`");
-            
-            foreach($data as $kazka){
-                $id = $kazka['id']; $name = $kazka['name']; $author = $kazka['author']; $model = $kazka['model']; $audio = $kazka['audio']; $text = $kazka['text'];
+        require_once "./db.php";
+        $data = $conn->query("SELECT * FROM `kazka`");
 
-                echo '
-                    <div class="kazka">
-                        <div class="kazka__row">
-                            <img class="kazka__img" src="./assets/previews/'.$model.'.png">
-                        </div>
-                        <div class="kazka__row">
-                            <h2>'.$name.'</h2>
-                            <p>'.$author.'</p>
-                            <a href="javascript:void(0)" class="kazka__open-btn" onclick="$(\'#details-wrapper\').load(\'./get_kazka.php\', {
-                                Id: \''.$id.'\'
-                            }); $(\'#details-wrapper\').fadeIn(\'slow\');$(\'#details-wrapper\').css(\'display\', \'flex\');">
-                                Детальніше
-                            </a>
-                        </div>
+        foreach ($data as $kazka) {
+            $id = $kazka['id'];
+            $name = $kazka['name'];
+            $author = $kazka['author'];
+            $model = $kazka['model'];
+            $audio = $kazka['audio'];
+            $text = $kazka['text'];
+
+            echo '
+                <div class="kazka">
+                    <div class="kazka__row">
+                        <img src="./assets/previews/' . $model . '.png" class="kazka__img">
                     </div>
-                ';
+                    <div class="kazka__row">
+                        <h2>' . $name . '</h2>
+                        <p>' . $author . '</p>
+                        <a href="javascript:void(0)" class="kazka__open-btn" onclick="$(\'#details-wrapper\').load(\'./get_kazka.php\', {
+                            Id: \'' . $id . '\'
+                        }); $(\'#details-wrapper\').fadeIn(\'slow\');$(\'#details-wrapper\').css(\'display\', \'flex\');">
+                            Детальніше
+                        </a>
+                    </div>
+                </div>
+            ';
 
-            }
+        }
         ?>
     </main>
 

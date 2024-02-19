@@ -18,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, rgba(232, 194, 236, 0.85) 10%, rgba(202, 188, 227, 1) 30%, rgba(151, 208, 223, 1) 70%, rgba(134, 215, 222, 1) 90%);
+    background: linear-gradient(45deg, rgb(251 214 255) 10%, rgb(211 187 255) 30%, rgb(162 236 255) 70%, rgb(100 219 229) 90%);
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
@@ -307,12 +307,12 @@ model-viewer {
 
 @media screen and (max-width: 1610px) {
     .kazka__row h2 {
-        font-size: 18px;
+        font-size: 24px;
         margin-bottom: 0px;
     }
 
     .kazka__row p {
-        font-size: 14px;
+        font-size: 18px;
         margin-top: 5px;
     }
 

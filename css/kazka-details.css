@@ -17,8 +17,8 @@
 }
 
 .details {
-    width: 75vw;
-    height: 65vh;
+    width: 90vw;
+    height: 85vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -163,4 +163,43 @@
 .details__close img {
     width: 100%;
     height: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .details {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .details__name {
+        margin-top: 50px;
+    }
+
+    .quick-feedback {
+        justify-content: center;
+        width: 100% !important;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stars-wrapper {
+        gap: 0 10px;
+        justify-content: center;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+
+    .details__author {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .details__col {
+        width: 100% !important;
+    }
 }

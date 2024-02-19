@@ -13,6 +13,21 @@ body {
 }
 
 
+.back-btn img {
+    left: -40px;
+    top: 0;
+    transform: rotate(225deg);
+}
+
+.back-btn {
+    opacity: 1 !important;
+    position: relative;
+    top: 40px;
+    left: 60px;
+    font-size: 20px;
+    border-radius: 6px 4px 16px 4px;
+}
+
 .swiper-wrapper {
     height: 95vh;
     width: 100%;

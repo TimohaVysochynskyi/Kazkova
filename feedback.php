@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="back-btn-wrapper">
+        <a href="./" class="feedback-btn back-btn"><img src="./assets/curved-arrow.png">Повернутися до головної</a>
+    </div>
     <main class="container">
         <div class="title-wrapper" style="margin-top: 10vh">
             <h1 class="title">Усі відгуки</h1>
