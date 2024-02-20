@@ -1,28 +1,7 @@
 <?php
-require_once "./db.php";
+require_once 'db.php';
 
-$allKazka = $conn->query("SELECT * FROM `kazka`");
-
-
-$allKazkaRates = [];
-
-foreach ($allKazka as $kazka) {
-    $id = $kazka['id'];
-
-    $allStar = $kazka['all_star'];
-    $allStar = explode(" | ", $allStar);
-    $starSum = array_sum($allStar);
-
-    $starCount = intval($kazka['star_count']);
-
-    $starAvarage = $starSum / $starCount;
-    $starAvarage = round($starAvarage, 4);
-
-    $allKazkaRates[$id] = $starAvarage;
-}
-
-var_dump($allKazkaRates);
-
+$data = $conn->query("SELECT * FROM `kazka` ORDER BY `star_avarage` DESC LIMIT 5");
 ?>
 
 <!DOCTYPE html>
@@ -55,11 +34,15 @@ var_dump($allKazkaRates);
         </div>
         <div class="swiper best">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
+                <?php
+                foreach($data as $row){
+                    echo '
+                    <div class="swiper-slide">
+                        <img src="assets/books/'.$row["model"].'.png" alt="Книга" class="book-img">
+                    </div>
+                    ';
+                }
+                ?>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
