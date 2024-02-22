@@ -18,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, rgb(251 214 255) 10%, rgb(211 187 255) 30%, rgb(162 236 255) 70%, rgb(100 219 229) 90%);
+    background: linear-gradient(45deg, rgb(114 78 177) 10%, rgb(223 130 233) 30%, rgb(217 213 148) 70%, rgb(140 242 243) 90%);
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
@@ -170,12 +170,12 @@ model-viewer {
 
     box-shadow: 0px 0px 4px 2px rgba(60, 60, 60, 0.35);
     border-radius: 25px;
-    background: linear-gradient(-45deg, rgb(233 233 194 / 60%) 35%, rgb(168 215 222 / 55%) 80%);
+    background: linear-gradient(-45deg, rgb(225 222 172) 35%, rgb(148 233 245) 80%);
 }
 
 .kazka:hover .kazka__row:last-child {
     height: 100%;
-    background-color: rgba(103, 193, 145, 0.8);
+    background-color: #77e3c2;
     border-radius: 25px;
 }
 
@@ -252,7 +252,7 @@ model-viewer {
     top: auto;
     bottom: 0 !important;
     height: 30%;
-    background-color: rgba(128, 213, 168, 0.8);
+    background-color: #77e3c2;
     border-radius: 0 0 25px 25px;
     transition: .5s ease-out;
 }

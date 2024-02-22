@@ -30,7 +30,7 @@ $data = $conn->query("SELECT * FROM `kazka` ORDER BY `star_avarage` DESC LIMIT 5
             <model-viewer src="./assets/logo.glb" class="logo" ar ar-modes="webxr scene-viewer quick-look"
                 camera-controls poster="poster.webp" shadow-intensity="1" autoplay exposure="0.75"
                 tone-mapping="commerce" shadow-softness="1" min-camera-orbit="90deg 90deg"
-                max-camera-orbit="90deg 90deg 3.5m"> </model-viewer>
+                max-camera-orbit="90deg 90deg"> </model-viewer>
         </div>
         <div class="swiper best">
             <div class="swiper-wrapper">
