@@ -27,10 +27,10 @@ $data = $conn->query("SELECT * FROM `kazka` ORDER BY `star_avarage` DESC LIMIT 5
 <body>
     <header class="header">
         <div class="logo-wrapper">
-            <model-viewer src="./assets/logo.glb" class="logo" ar ar-modes="webxr scene-viewer quick-look"
-                camera-controls poster="poster.webp" shadow-intensity="1" autoplay exposure="0.75"
-                tone-mapping="commerce" shadow-softness="1" min-camera-orbit="90deg 90deg"
-                max-camera-orbit="90deg 90deg"> </model-viewer>
+            <model-viewer src="./assets/logo.glb" class="logo" ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1" autoplay exposure="0.75"
+                tone-mapping="commerce" shadow-softness="1"
+                camera-orbit="90deg 90deg" min-camera-orbit="90deg 90deg"
+                    max-camera-orbit="90deg 90deg auto"> </model-viewer>
         </div>
         <div class="swiper best">
             <div class="swiper-wrapper">
@@ -68,6 +68,7 @@ $data = $conn->query("SELECT * FROM `kazka` ORDER BY `star_avarage` DESC LIMIT 5
             },
         });
     </script>
+    <script src="./js/responsible.js"></script>
 </body>
 
 </html>

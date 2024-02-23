@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Shantell Sans', cursive;
+    font-family: "SF-Medium";
 }
 
 .bg-blur {
@@ -473,4 +473,26 @@ model-viewer {
     header {
         height: 20vh;
     }
+}
+
+
+@font-face {
+    font-family: "SF-Thin";
+    src: url(../font/SF-Pro-Rounded-Thin.otf);
+}
+@font-face {
+    font-family: "SF-Light";
+    src: url(../font/SF-Pro-Rounded-Light.otf);
+}
+@font-face {
+    font-family: "SF-Medium";
+    src: url(../font/SF-Pro-Rounded-Medium.otf);
+}
+@font-face {
+    font-family: "SF-Regular";
+    src: url(../font/SF-Pro-Rounded-Regular.otf);
+}
+@font-face {
+    font-family: "SF-Bold";
+    src: url(../font/SF-Pro-Rounded-Bold.otf);
 }
