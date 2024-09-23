@@ -14,3 +14,9 @@
   font-size: 34px;
   font-weight: 500;
 }
+
+@media screen and (max-width: 550px) {
+  .header {
+    flex-direction: column;
+  }
+}

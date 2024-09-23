@@ -46,3 +46,21 @@
     transform: translateY(-15px);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .top {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 46px;
+  }
+  .number {
+    font-size: 64px;
+  }
+}

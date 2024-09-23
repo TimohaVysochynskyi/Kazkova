@@ -1,0 +1,29 @@
+.container {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px;
+}
+.name {
+  font-size: 26px;
+  margin: 10px 0;
+  width: 100%;
+  letter-spacing: 1.1px;
+  color: #333333;
+  display: flex;
+}
+.feedback {
+  font-size: 22px;
+  margin: 10px 0;
+  width: 100%;
+  letter-spacing: 1.1px;
+  color: #333333;
+  font-family: "SF-Light";
+  display: flex;
+}

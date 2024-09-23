@@ -7,6 +7,7 @@ import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import KazkaList from "../../components/KazkaList/KazkaList";
 import KazkaModal from "../../components/KazkaModal/KazkaModal";
+import FeedbackForm from "../../components/FeedbackForm/FeedbackForm.jsx";
 
 import css from "./HomePage.module.css";
 
@@ -54,6 +55,7 @@ export default function HomePage() {
         {kazkas.length > 0 && (
           <KazkaList kazkas={kazkas} openModal={handleModalOpen} />
         )}
+        <FeedbackForm />
       </main>
 
       {isModal && (

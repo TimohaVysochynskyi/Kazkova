@@ -47,3 +47,12 @@
 .model {
   outline: none;
 }
+
+@media screen and (max-width: 900px) {
+  .modal {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+  }
+}

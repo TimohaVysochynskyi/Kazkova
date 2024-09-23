@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  margin-top: 50px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px 0;
+}
+.title {
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 0px 0px 1px #111;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+}
+.group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  height: 85px;
+}
+.label {
+  color: #fff;
+  font-family: "SF-Light";
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.input,
+.btn {
+  font-size: 20px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  font-family: "SF-Light";
+  padding: 8px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 500;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-family: "SF-Medium";
+}
+
+.error {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "SF-Light";
+}

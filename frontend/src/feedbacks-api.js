@@ -6,7 +6,7 @@ export const getFeedbacks = async () => {
   return response.data;
 };
 
-export const createFeedback = async ({ name, feedback }) => {
+export const createFeedback = async (name, feedback) => {
   const response = await axios.post(`https://kazkova.onrender.com/feedbacks/`, {
     name,
     feedback,
