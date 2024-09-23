@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.starNumber {
+  color: #fff;
+  font-size: 44px;
+  margin-right: 20px;
+  letter-spacing: 5px;
+}
+.starWrapper {
+  display: flex;
+  gap: 0 10px;
+}
+.star {
+  color: #ebba16;
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 50px;
+  padding-bottom: 15px;
+}
+.author,
+.author a {
+  font-size: 18px;
+  font-family: "SF-Light";
+  letter-spacing: 0.6px;
+}

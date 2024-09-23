@@ -17,7 +17,7 @@ export default function Banner() {
           <Logo />
         </div>
         <div className={css.bottom}>
-          <a href="#">
+          <a href="#kazka-list">
             <FaAnglesDown className={css.arrow} />
           </a>
         </div>

@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5vw;
+  list-style: none;
+}
+.item {
+  width: 400px;
+  height: 500px;
+}
