@@ -1,0 +1,35 @@
+* {
+  font-family: "SF-Medium";
+}
+body {
+  background: linear-gradient(
+    45deg,
+    rgb(114 78 177) 10%,
+    rgb(223 130 233) 30%,
+    rgb(217 213 148) 70%,
+    rgb(140 242 243) 90%
+  );
+  min-height: 100vh;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "SF-Thin";
+  src: url(/font/SF-Pro-Rounded-Thin.otf);
+}
+@font-face {
+  font-family: "SF-Light";
+  src: url(/font/SF-Pro-Rounded-Light.otf);
+}
+@font-face {
+  font-family: "SF-Medium";
+  src: url(/font/SF-Pro-Rounded-Medium.otf);
+}
+@font-face {
+  font-family: "SF-Regular";
+  src: url(./font/SF-Pro-Rounded-Regular.otf);
+}
+@font-face {
+  font-family: "SF-Bold";
+  src: url(/font/SF-Pro-Rounded-Bold.otf);
+}

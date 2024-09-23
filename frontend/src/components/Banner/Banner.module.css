@@ -1,0 +1,48 @@
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+  background-size: cover;
+  background-position: center;
+}
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.content {
+  width: 40vw;
+}
+.number {
+  font-size: 84px;
+}
+.title {
+  color: #fff;
+  text-shadow: 0px 0px 1px #111;
+  font-size: 64px;
+  font-family: "SF-Bold";
+  letter-spacing: 1px;
+}
+.arrow {
+  width: 84px;
+  height: 84px;
+  color: #fff;
+  text-decoration: none;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
