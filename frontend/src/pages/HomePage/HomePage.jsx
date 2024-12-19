@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { getKazkas } from "../../kazka-api.js";
+import { createFeedback } from "../../feedbacks-api.js";
 
 import Banner from "../../components/Banner/Banner";
 import Loader from "../../components/Loader/Loader";
@@ -36,6 +37,19 @@ export default function HomePage() {
     fetchKazkas();
   }, []);
 
+  const handleCreateFeedback = async (name, feedback) => {
+    try {
+      setError(false);
+      setLoading(true);
+      await createFeedback(name, feedback);
+    } catch (error) {
+      setError(true);
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleModalOpen = async (data) => {
     setIsModal(true);
     setModalData(data);
@@ -55,7 +69,7 @@ export default function HomePage() {
         {kazkas.length > 0 && (
           <KazkaList kazkas={kazkas} openModal={handleModalOpen} />
         )}
-        <FeedbackForm />
+        <FeedbackForm onAdd={handleCreateFeedback} />
       </main>
 
       {isModal && (

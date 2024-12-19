@@ -2,9 +2,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useId } from "react";
-import toast, { Toaster } from "react-hot-toast";
-
-import { createFeedback } from "../../feedbacks-api.js";
+//import toast, { Toaster } from "react-hot-toast";
 
 import css from "./FeedbackForm.module.css";
 
@@ -16,31 +14,24 @@ const FeedbackSchema = Yup.object().shape({
   feedback: Yup.string().required("Має бути заповненим"),
 });
 
-export default function FeedbackForm() {
+export default function FeedbackForm({ onAdd }) {
   const id = useId();
 
   const handleSubmit = async (values, actions) => {
-    try {
-      // Send POST request
-      await createFeedback(values.name, values.feedback);
-      toast.success("Відгук додано!");
-      actions.resetForm();
-    } catch (error) {
-      toast.error("Не вийшло надіслати відгук :(");
-      console.error(error);
-    }
+    onAdd(values.name, values.feedback);
+    actions.resetForm();
   };
 
   return (
     <>
       <div className={css.container}>
-        <Toaster
+        {/* {<Toaster
           containerStyle={{
             position: "relative",
           }}
           position="top-right"
           reverseOrder={false}
-        />
+        />} */}
 
         <Formik
           initialValues={{

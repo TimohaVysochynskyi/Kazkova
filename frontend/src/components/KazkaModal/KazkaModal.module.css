@@ -48,6 +48,16 @@
   outline: none;
 }
 
+@media screen and (max-width: 1144px) {
+  .name,
+  .starNumber {
+    font-size: 36px;
+  }
+  .author {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .modal {
     flex-direction: column;

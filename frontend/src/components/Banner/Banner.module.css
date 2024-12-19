@@ -47,6 +47,19 @@
   }
 }
 
+@media screen and (max-width: 1144px) {
+  .number {
+    font-size: 64px;
+  }
+  .title {
+    font-size: 52px;
+  }
+  .arrow {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .top {
     flex-direction: column;

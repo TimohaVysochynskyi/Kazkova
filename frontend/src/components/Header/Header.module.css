@@ -14,6 +14,11 @@
   font-size: 34px;
   font-weight: 500;
 }
+@media screen and (max-width: 1144px) {
+  .title {
+    font-size: 30px;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .header {

@@ -17,3 +17,9 @@
 .active {
   font-family: "SF-Medium";
 }
+
+@media screen and (max-width: 1144px) {
+  .link {
+    font-size: 18px;
+  }
+}

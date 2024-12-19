@@ -14,13 +14,10 @@ export default function KazkaStars({ stars }) {
   return (
     <>
       <div className={css.container}>
-        <p className={css.starNumber}>{avarageStar}/5</p>
         <div className={css.starWrapper}>
-          <PiButterflyFill className={css.star} />
-          <PiButterflyFill className={css.star} />
-          <PiButterflyFill className={css.star} />
-          <PiButterflyFill className={css.star} />
-          <PiButterflyFill className={css.star} />
+          {Array.from({ length: avarageStar }, (_, i) => (
+            <PiButterflyFill key={i} className={css.star} />
+          ))}
         </div>
       </div>
     </>

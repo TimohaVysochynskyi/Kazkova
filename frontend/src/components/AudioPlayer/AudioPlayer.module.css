@@ -41,3 +41,16 @@
   object-fit: contain;
   object-position: center;
 }
+
+@media screen and (max-width: 1144px) {
+  .btn {
+    width: 64px;
+    height: 64px;
+  }
+  .progressTime {
+    font-size: 18px;
+  }
+  .progressBar {
+    height: 12px;
+  }
+}
